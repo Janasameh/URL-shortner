@@ -10,7 +10,7 @@ const { default: rateLimit } = require('express-rate-limit');
 
 const limiter = rateLimit({
   windowMs: 60 * 60 * 1000,
-  max: 10, 
+  max: 100, 
   message: "Too many requests from this IP, please try again after an hour."
 });
 
@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB connected successfully"))
   .catch(err => console.error("MongoDB connection error:", err));
 
-  app.use('/api/shortenURL', urlRouter);
+  app.use('/api', urlRouter);
   app.use('/api/auth', AuthRouter);
   app.use('/api/admin-dashboard',adminRouter);
 
