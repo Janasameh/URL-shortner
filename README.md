@@ -1,2 +1,2 @@
 this project is meant to implemsnt some of the basic principles of backend development
-https://github.com/Janasameh/URL-shortner
+https://roadmap.sh/projects/url-shortening-service
